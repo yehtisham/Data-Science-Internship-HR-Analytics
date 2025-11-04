@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{caption}
+
+\setstretch{1.25}
+
+\begin{document}
+
+% ----------- Custom Title Page -----------
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    {\LARGE \textbf{SIEHS HR Analytics Dashboard Report}\par}
+    \vspace{1cm}
+    {\large Muhammad Yahya\par}
+    \vspace*{\fill}
+\end{titlepage}
+% ----------------------------------------
+
+\begin{abstract}
+Sindh Integrated Emergency \& Health Services (SIEHS) is responsible for managing a large network of emergency and healthcare professionals across Sindh, Pakistan. Efficient human resource (HR) operations are crucial for ensuring timely service delivery, especially in emergency settings. This report documents the development of an HR analytics dashboard built using Power BI to analyze employee attendance, punctuality, and leave patterns. The dashboard leverages timestamp-based HR data for approximately 1,790 employees across multiple departments and locations. It visualizes key performance indicators (KPIs) such as attendance percentage, absenteeism rate, average working hours, leave types, and invalid entries. The goal of this project was to improve workforce visibility, support data-driven decision making, and track operational efficiency. The results indicate improvements in punctuality and strengthened monitoring capabilities within the organization.
+\end{abstract}
+
+\section{Introduction}
+SIEHS operates one of the largest emergency response systems in Pakistan. Given the high stakes of emergency medical services, timely attendance and shift compliance are mission-critical factors. Before this analytics initiative, HR performance monitoring was conducted manually, making it difficult to identify inefficiencies and trends across the workforce.
+
+This project introduces an automated and visually intuitive dashboard that consolidates HR metrics into a single analytical interface. It aims to support management in understanding employee behavior, reducing late arrivals, minimizing absenteeism, and identifying departments requiring operational intervention.
+
+\section{Data and Methodology}
+\subsection{Data Source}
+The dataset consists of employee-level attendance records including timestamps, department information, shift assignments, and leave details. The dataset covers 1,790 employees distributed across major functional units such as:
+\begin{itemize}
+    \item Operations Wing (EMS)
+    \item Command and Control
+    \item Technical Wing
+    \item People and Culture
+    \item Public Relations
+    \item Research and Development
+\end{itemize}
+
+\subsection{Data Cleaning and Processing}
+Initial data preparation was performed in Excel and Python. Cleaning steps included:
+\begin{itemize}
+    \item Removing duplicate or corrupted entries.
+    \item Standardizing department and location names.
+    \item Identifying invalid timestamp entries (e.g., missing check-in/out).
+    \item Calculating punctuality metrics and attendance rates.
+    \item Classifying approved vs. unapproved leave types.
+\end{itemize}
+
+KPIs were computed such as:
+\begin{itemize}
+    \item Attendance Percentage
+    \item Absent Percentage
+    \item Total Late Attendance
+    \item Total Annual Leaves
+    \item Average Working Hours
+\end{itemize}
+
+\section{Dashboard Design}
+The dashboard was developed in Microsoft Power BI due to its ability to support dynamic filtering and drill-down interactions. A dark theme was selected to enhance visual clarity.
+
+Figure \ref{fig:dashboard} shows the complete dashboard layout including:
+\begin{itemize}
+    \item Overall employee count and attendance KPIs at the top.
+    \item Department-wise punctuality performance.
+    \item Leave statistics by location.
+    \item Invalid entry tracker for data quality monitoring.
+    \item Distribution of leave types and shift scheduling.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{dashboard_overview.png}
+\caption{Overview of the HR Analytics Dashboard visualizing attendance, leaves, and punctuality metrics for SIEHS employees.}
+\label{fig:dashboard}
+\end{figure}
+
+\section{Results and Findings}
+The dashboard enabled rapid interpretation of HR performance across the organization. Major findings include:
+
+\subsection{Attendance Performance}
+\begin{itemize}
+    \item The overall attendance percentage was approximately 91.24\%.
+    \item The absenteeism rate remained below 10\%, which is operationally acceptable.
+    \item Some departments exhibited higher absence rates due to field-based duties.
+\end{itemize}
+
+\subsection{Punctuality Analysis}
+\begin{itemize}
+    \item A significant number of late arrivals were recorded at high-density locations such as Bin Qasim and Hyderabad.
+    \item The invalid entry tracker highlighted areas for system improvement in biometric recording.
+\end{itemize}
+
+\subsection{Leave Insights}
+\begin{itemize}
+    \item Sick leave and annual short leave represented the majority of total leaves.
+    \item Leave trends showed seasonal variations requiring scheduling adjustments.
+\end{itemize}
+
+\subsection{Impact of the Dashboard}
+After implementation:
+\begin{itemize}
+    \item A measurable improvement in punctuality was observed, estimated at around 10\%.
+    \item HR managers were able to identify at-risk departments for targeted interventions.
+    \item Data-driven policies were adopted for leave approval and shift assignment.
+\end{itemize}
+
+\section{Conclusion}
+The SIEHS HR Analytics Dashboard provides a centralized and automated solution for monitoring employee attendance and operational efficiency. The ability to analyze trends at department and location levels has strengthened HR oversight and improved organizational decision-making. Future enhancements may include:
+\begin{itemize}
+    \item Predictive analytics for absenteeism risk.
+    \item Integration with mobile attendance systems.
+    \item Employee performance correlation with service delivery metrics.
+\end{itemize}
+
+This project demonstrates the value of business intelligence tools in healthcare and emergency service environments, where operational readiness is essential for saving lives.
+
+
+\end{document}
