@@ -4,7 +4,7 @@
 ---
 
 ## Confidentiality Notice
-This repository contains no sensitive company data. All files are sanitized, authorized for portfolio use, and safe for public release.
+This repository contains no sensitive company data. All files are sanitized and authorized 
 
 ---
 
